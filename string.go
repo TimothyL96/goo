@@ -1,4 +1,4 @@
-package strings
+package goo
 
 import "strings"
 
