@@ -1,5 +1,8 @@
 # Golang OO
 
+How to use Goo: [GOO Example](https://github.com/TimothyL96/goo-example)
+
+<br>
 
 Run test: `go test -v ./...`
 
