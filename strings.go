@@ -21,3 +21,8 @@ func (s String) ToLower() String {
 func (s String) Trim(cutset String) String {
 	return String(strings.Trim(s.ToString(), cutset.ToString()))
 }
+
+// Length will return builtin int type
+func (n String) Length() int {
+	return len(n)
+}

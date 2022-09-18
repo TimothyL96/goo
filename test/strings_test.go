@@ -52,3 +52,13 @@ func TestTrim(t *testing.T) {
 		t.Errorf("Trim(%s) = %s; want %s", gString, get, want)
 	}
 }
+
+func TestLength(t *testing.T) {
+	want := 3
+	gString := goo.FromString("abc")
+	get := gString.Length()
+
+	if get != want {
+		t.Errorf("Length() = %d; want %d", get, want)
+	}
+}

@@ -70,3 +70,19 @@ func BenchmarkStdTrim(b *testing.B) {
 		_ = strings.Trim(str, ",.")
 	}
 }
+
+func BenchmarkLength(b *testing.B) {
+	gString := goo.FromString(",.ABC.,")
+
+	for i := 0; i < b.N; i++ {
+		_ = gString.Length()
+	}
+}
+
+func BenchmarkStdLength(b *testing.B) {
+	str := ",.ABC.,"
+
+	for i := 0; i < b.N; i++ {
+		_ = len(str)
+	}
+}
