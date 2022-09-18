@@ -38,10 +38,11 @@ jobs:
           command: |
             mkdir -p /tmp/test-reports
             ./cc-test-reporter before-build
-            go test -v -race -covermode=atomic -coverprofile=/tmp/test-reports/coverage.txt
-            ./cc-test-reporter after-build --coverage-input-type coverage --exit-code $?
+            go test -v -race -covermode=atomic -coverprofile=/tmp/test-reports/coverage.out
+            go tool cover -html=/tmp/test-reports/coverage.out -o coverage.html
+            ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
       - codecov/upload:
-          file: /tmp/test-reports/coverage.txt
+          file: /tmp/test-reports/coverage.html
       - store_test_results:
           path: /tmp/test-reports
 
