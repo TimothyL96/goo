@@ -5,7 +5,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/go:1.18
+      - image: circleci/golang:1.18
     steps:
       - checkout
       - run:
