@@ -37,7 +37,7 @@ jobs:
           name: Run tests
           command: |
             mkdir -p /tmp/test-reports
-            go test -v -race -covermode=atomic -coverprofile=coverage.txt
+            go test -race -covermode=atomic -coverprofile=coverage.txt
       - codecov/upload
       - store_test_results:
           path: /tmp/test-reports
