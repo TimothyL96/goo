@@ -47,8 +47,8 @@ func From{{ .Name | ToTitle }}(n {{ .Name }}) {{ .Name | ToTitle }} {
 }
 
 // To{{ .Name | ToTitle }} converts instance to builtin {{ .Name }}
-func (n *{{ .Name | ToTitle }}) To{{ .Name | ToTitle }}() {{ .Name }} {
-	return {{ .Name }}(*n)
+func (n {{ .Name | ToTitle }}) To{{ .Name | ToTitle }}() {{ .Name }} {
+	return {{ .Name }}(n)
 }
 {{- end }}
 `))
