@@ -2,4 +2,4 @@ module github.com/timothyl96/goo
 
 go 1.19
 
-require golang.org/x/exp v0.0.0-20220916125017-b168a2c6b86b
+require golang.org/x/text v0.3.7
