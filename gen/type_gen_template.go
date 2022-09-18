@@ -35,7 +35,7 @@ var genTemplate = template.Must(template.New("").Funcs(funcsMap).Parse(`// Code 
 // This file was generated at
 // {{ .Timestamp }}
 package goo
-{{ println }}
+{{ printf "" }}
 {{- range .Types }}
 type {{ .Name | ToTitle }} {{ .Name }}
 {{- end }}
