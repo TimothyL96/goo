@@ -63,8 +63,8 @@ The result below shows that the performances are similar when compared to builti
 
 ## <b>Running the source code</b> :runner:
 
-Run generate for code generation: `go generate ./...`
+1. Run generate for code generation: `go generate ./...`
 
-Run test: `go test -v ./...`
+2. Run test: `go test -v ./...`
 
-Run benchmark: `go test -bench=Bench -run Bench -benchmem -benchtime 10s -v ./...`
+3. Run benchmark: `go test -bench=Bench -run Bench -benchmem -benchtime 10s -v ./...`
