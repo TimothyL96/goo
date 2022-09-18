@@ -1,0 +1,13 @@
+language: go
+
+go:
+  - 1.19.x
+  - tip
+
+before_install:
+  - go get -t -v ./...
+  - go mod download
+
+script:
+  - go test -v -race -coverprofile=coverage.txt -covermode=atomic
+  - godacov -t $CODACY_TOKEN -r ./coverage.txt -c $TRAVIS_COMMIT
