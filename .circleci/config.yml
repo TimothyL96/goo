@@ -3,7 +3,6 @@ version: 2.1
 orbs:
   codecov: codecov/codecov@3.2.3
   go: circleci/go@1.7.1
-  coverage-reporter: codacy/coverage-reporter@13.10.14
 jobs:
   build:
     executor:
@@ -20,9 +19,9 @@ jobs:
           race: true
           coverprofile: coverage.out
           verbose: true
-      - coverage-reporter/send_report:
-          coverage-reports: 'coverage.out'
-          project-token: $CODACY_PROJECT_TOKEN
+      - run:
+          command: bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
+                   --force-coverage-parser go -r <coverage report file name>
       - codecov/upload
 
 workflow:
