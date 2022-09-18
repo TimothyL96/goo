@@ -1,4 +1,4 @@
-package goo
+package test
 
 import (
 	"testing"
