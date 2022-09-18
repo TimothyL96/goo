@@ -7,3 +7,7 @@ enabled = true
   [analyzers.meta]
   import_root = "github.com/TimothyL96/goo"
   dependencies_vendored = true
+
+[[transformers]]
+name = "gofmt"
+enabled = true
