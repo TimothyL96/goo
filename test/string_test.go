@@ -11,7 +11,7 @@ func TestFromString(t *testing.T) {
 	get := goo.FromString(want)
 
 	if get.ToString() != want {
-		t.Errorf("NewString(%s) = %s; want %s", want, get, want)
+		t.Errorf("FromString(%s) = %s; want %s", want, get, want)
 	}
 }
 
