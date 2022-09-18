@@ -3,7 +3,6 @@
 // 2022-09-18 23:08:45.3757558 +0800 +08 m=+0.050232801
 package goo
 
-
 type Bool bool
 
 func FromBool(n bool) Bool {

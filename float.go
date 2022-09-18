@@ -3,7 +3,6 @@
 // 2022-09-18 23:08:40.3786778 +0800 +08 m=+0.006428901
 package goo
 
-
 type Float32 float32
 type Float64 float64
 

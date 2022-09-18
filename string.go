@@ -3,7 +3,6 @@
 // 2022-09-18 23:08:42.4892366 +0800 +08 m=+0.018649201
 package goo
 
-
 type String string
 
 func FromString(n string) String {

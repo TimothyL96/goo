@@ -3,7 +3,6 @@
 // 2022-09-18 23:08:47.8985867 +0800 +08 m=+0.031978601
 package goo
 
-
 type Complex128 complex128
 type Complex64 complex64
 

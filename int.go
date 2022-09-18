@@ -3,7 +3,6 @@
 // 2022-09-18 23:08:38.1297538 +0800 +08 m=+0.023299201
 package goo
 
-
 type Int int
 type Int8 int8
 type Int16 int16
