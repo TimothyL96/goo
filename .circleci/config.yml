@@ -21,7 +21,7 @@ jobs:
           verbose: true
       - run:
           command: bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
-                   --force-coverage-parser go -r <coverage report file name>
+                   --force-coverage-parser go -r coverage.out
       - codecov/upload
 
 workflow:
