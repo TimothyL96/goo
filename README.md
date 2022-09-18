@@ -52,7 +52,15 @@ How to use Goo:
 
 ---  
 
-## <b>Running the source code</b>
+## <b>Benchmark</b> :clock330:
+
+x
+
+<br>
+
+---  
+
+## <b>Running the source code</b> :runner:
 
 Run generate for code generation: `go generate ./...`
 
