@@ -1,4 +1,4 @@
-# <b>$$\textcolor{yellow}{\text{GOO}}$$</b>
+# $$\textcolor{yellow}{\text{GOO}}$$
 
 ## <b>G</b>olang standard library - the <b>OO</b> way
 
