@@ -35,7 +35,7 @@ str.length() // compared to len(str)
 var i goo.Int
 i = 30
 i += 20
-i.Itoa() // == 50, compared to strconv.Itoa(i)
+i.Itoa() // == "50", compared to strconv.Itoa(i)
 
 // Another example:
 var s goo.String
