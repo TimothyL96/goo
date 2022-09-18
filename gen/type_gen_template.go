@@ -43,6 +43,7 @@ type {{ .Name | ToTitle }} {{ .Name }}
 
 {{- range .Types }}
 
+// From{{ .Name | ToTitle }} converts builtin type to Goo's {{ .Name }}
 func From{{ .Name | ToTitle }}(n {{ .Name }}) {{ .Name | ToTitle }} {
 	return {{ .Name | ToTitle }}(n)
 }
