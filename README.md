@@ -1,6 +1,6 @@
 # $$\textcolor{yellow}{\text{GOO}}$$
 
-## <b>G</b>olang standard library - the <b>OO</b> way
+## **G**olang standard library - the **OO** way
 
 <br>
 
