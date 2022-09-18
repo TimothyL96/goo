@@ -35,7 +35,7 @@ jobs:
             chmod +x ./cc-test-reporter
       - run:
           name: Run tests
-          command:
+          command: |
             mkdir -p /tmp/test-reports
             go test -v -race -covermode=atomic -coverprofile=/tmp/test-reports/coverage.out
       - codecov/upload
