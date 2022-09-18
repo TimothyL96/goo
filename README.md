@@ -1,10 +1,10 @@
 # $$\textcolor{yellow}{\text{GOO}}$$
 
- **G**olang standard library - the **OO** way
+## **G**olang standard library - the **OO** way
 
 <br>
 
-> The library you never knew you needed
+> The library you never knew you needed :bulb:
 
 <br>
 
