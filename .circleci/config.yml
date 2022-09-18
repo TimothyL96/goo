@@ -20,10 +20,10 @@ jobs:
           race: true
           coverprofile: coverage.out
           verbose: true
-      - codecov/upload
       - coverage-reporter/send_report:
           coverage-reports: 'coverage.out'
           project-token: $CODACY_PROJECT_TOKEN
+      - codecov/upload
 
 workflow:
   version: 2.1
