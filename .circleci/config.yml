@@ -15,8 +15,10 @@ jobs:
       - go/save-cache
       - go/test:
           covermode: atomic
-          failfast: true
+          failfast: false
           race: true
+          coverprofile: coverage.out
+          verbose: true
       - codecov/upload
 
 workflow:
