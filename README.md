@@ -28,18 +28,18 @@ Adding methods to 'builtin' types so we can simplify calling functions in OO way
 ```Go
 // Example:
 str := goo.FromString("myString")
-str.length() // compared to len(str)
+str.length() // same as len(str)
 
 // Another example:
 var i goo.Int
 i = 30
 i += 20
-i.Itoa() // == "50", compared to strconv.Itoa(i)
+i.Itoa() // == "50", same as strconv.Itoa(i)
 
 // Another example:
 var s goo.String
 s = "myuppercasestring"
-s.ToUpper() // == "MYUPPERCASESTRING", compared to strings.ToUpper(s)
+s.ToUpper() // == "MYUPPERCASESTRING", same as strings.ToUpper(s)
 ```
 
 More:
