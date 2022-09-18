@@ -8,8 +8,8 @@ import (
 
 func main() {
 	types := []reflect.Type{
-		reflect.TypeOf((*string)(nil)).Elem(),
+		reflect.TypeOf((*bool)(nil)).Elem(),
 	}
 
-	Generator("string", types)
+	Generator("bool", types)
 }
