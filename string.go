@@ -3,7 +3,7 @@
 // 2022-09-18 20:42:04.2180152 +0800 +08 m=+0.005486101
 package goo
 
-
+// String currently doesn't support both builtin string and goo.String in input parameter
 type String string
 
 func FromString(n string) String {

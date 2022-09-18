@@ -21,6 +21,6 @@ func TestToFloat64(t *testing.T) {
 	get := gInt.ToFloat64()
 
 	if get != want {
-		t.Errorf("ToFloat64(%f) = %f; want %f", want, get, want)
+		t.Errorf("ToFloat64() = %f; want %f", get, want)
 	}
 }

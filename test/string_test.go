@@ -20,7 +20,7 @@ func TestToString(t *testing.T) {
 	get := goo.FromString("abc").ToString()
 
 	if get != want {
-		t.Errorf("ToString(%s) = %s; want %s", want, get, want)
+		t.Errorf("ToString() = %s; want %s", get, want)
 	}
 }
 

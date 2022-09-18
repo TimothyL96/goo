@@ -54,3 +54,19 @@ func BenchmarkStdToLower(b *testing.B) {
 		_ = strings.ToLower(str)
 	}
 }
+
+func BenchmarkTrim(b *testing.B) {
+	gString := goo.FromString(",.ABC.,")
+
+	for i := 0; i < b.N; i++ {
+		_ = gString.Trim(",.")
+	}
+}
+
+func BenchmarkStdTrim(b *testing.B) {
+	str := ",.ABC.,"
+
+	for i := 0; i < b.N; i++ {
+		_ = strings.Trim(str, ",.")
+	}
+}

@@ -21,6 +21,6 @@ func TestToInt(t *testing.T) {
 	get := gInt.ToInt()
 
 	if get != want {
-		t.Errorf("ToInt(%d) = %d; want %d", want, get, want)
+		t.Errorf("ToInt() = %d; want %d", get, want)
 	}
 }

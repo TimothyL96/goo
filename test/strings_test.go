@@ -18,7 +18,7 @@ func TestSplit(t *testing.T) {
 
 	for k := range want {
 		if want[k] != get[k].ToString() {
-			t.Errorf("Split(%s) of index %d = %s; want %s", toSplit, k, get[k], want[k])
+			t.Errorf("Split(%s) of index %d = %s; want %s", gString, k, get[k], want[k])
 		}
 	}
 }
@@ -29,7 +29,7 @@ func TestToUpper(t *testing.T) {
 	get := gString.ToUpper()
 
 	if get.ToString() != want {
-		t.Errorf("ToUpper(%s) = %s; want %s", want, get, want)
+		t.Errorf("ToUpper() = %s; want %s", get, want)
 	}
 }
 
@@ -39,6 +39,16 @@ func TestToLower(t *testing.T) {
 	get := gString.ToLower()
 
 	if get.ToString() != want {
-		t.Errorf("ToLower(%s) = %s; want %s", want, get, want)
+		t.Errorf("ToLower() = %s; want %s", get, want)
+	}
+}
+
+func TestTrim(t *testing.T) {
+	want := "ABC"
+	gString := goo.FromString(",.ABC.,")
+	get := gString.Trim(",.")
+
+	if get.ToString() != want {
+		t.Errorf("Trim(%s) = %s; want %s", gString, get, want)
 	}
 }
