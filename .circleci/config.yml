@@ -19,6 +19,10 @@ jobs:
           race: true
           coverprofile: coverage.out
           verbose: true
+      - run:
+          name: Codacy Test Coverage Upload
+          command: bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
+                   --force-coverage-parser go -r coverage.out
       - codecov/upload
 
 workflow:
