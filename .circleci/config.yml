@@ -38,8 +38,7 @@ jobs:
           command:
             mkdir -p /tmp/test-reports
             go test -v -race -covermode=atomic -coverprofile=/tmp/test-reports/coverage.out
-      - codecov/upload:
-          file: /tmp/test-reports/converage.out
+      - codecov/upload
       - store_test_results:
           path: /tmp/test-reports
 
