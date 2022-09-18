@@ -13,23 +13,12 @@ jobs:
       - go/load-cache
       - go/mod-download
       - go/save-cache
-      - run:
-          name: Setup Code Climate test-reporter
-          command: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
-      - run:
-          name: Code Climate before-build
-          command: ./cc-test-reporter before-build
       - go/test:
           covermode: atomic
           failfast: false
           race: true
-          coverprofile: c.out
+          coverprofile: coverage.out
           verbose: true
-      - run:
-          name: Code Climate after-build
-          command: ./cc-test-reporter after-build --coverage-input-type gocov --exit-code $?
       - codecov/upload
 
 workflow:
