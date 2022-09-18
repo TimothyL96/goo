@@ -8,6 +8,11 @@
 
 <br>
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/bbc9b7ccb927732ec239/maintainability)](https://codeclimate.com/github/TimothyL96/goo/maintainability)
+[![CodeFactor](https://www.codefactor.io/repository/github/timothyl96/goo/badge)](https://www.codefactor.io/repository/github/timothyl96/goo)
+
+<br>
+
 Adding methods to 'builtin' types so we can simplify calling functions in OO way.
 
 <br>
