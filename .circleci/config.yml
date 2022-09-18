@@ -29,14 +29,19 @@ jobs:
           paths:
             - "/go/pkg/mod"
       - run:
+          name: Setup Code Climate test-reporter
+          command:
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run:
           name: Run tests
           command: |
             mkdir -p /tmp/test-reports
             gotestsum --junitfile /tmp/test-reports/unit-tests.xml
-      - store_test_results:
-          path: /tmp/test-reports
       - codecov/upload:
           file: /tmp/test-reports/unit-tests.xml
+      - store_test_results:
+          path: /tmp/test-reports
 
 
 # Invoke jobs via workflows
