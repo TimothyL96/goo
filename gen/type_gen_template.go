@@ -11,6 +11,7 @@ import (
 	"golang.org/x/text/language"
 )
 
+// Genereator generate different builtin types with From and To functions from the input
 func Generator(fileName string, types []reflect.Type) {
 	file, err := os.Create(fileName + ".go")
 	if err != nil {

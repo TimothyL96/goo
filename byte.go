@@ -2,6 +2,7 @@ package goo
 
 type Byte byte
 
+// FromByte converts builtin byte to Byte
 func FromByte(n byte) Byte {
 	return Byte(n)
 }
