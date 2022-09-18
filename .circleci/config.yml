@@ -31,14 +31,13 @@ jobs:
       - run:
           name: Setup Code Climate test-reporter
           command:
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter;
             chmod +x ./cc-test-reporter
       - run:
           name: Run tests
           command:
             mkdir -p /tmp/test-reports
-            go test -race -covermode=atomic -coverprofile=/tmp/test-reports/coverage.out
-            # gotestsum --junitfile /tmp/test-reports/unit-tests.xml
+            go test -v -race -covermode=atomic -coverprofile=/tmp/test-reports/coverage.out
       - codecov/upload:
           file: /tmp/test-reports/converage.out
       - store_test_results:
