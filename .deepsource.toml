@@ -5,4 +5,5 @@ name = "go"
 enabled = true
 
   [analyzers.meta]
-  import_path = "github.com/TimothyL96/goo"
+  import_root = "github.com/TimothyL96/goo"
+  dependencies_vendored = true
