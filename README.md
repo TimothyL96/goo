@@ -68,3 +68,10 @@ The result below shows that the performances are similar when compared to builti
 2. Run test: `go test -v ./...`
 
 3. Run benchmark: `go test -bench=Bench -run Bench -benchmem -benchtime 10s -v ./...`
+
+<br>
+
+---  
+
+## <b>Contributing</b>
+Feel free to raise issue or PR
