@@ -36,7 +36,10 @@ i1 = 30
 i1 += 20
 i1.Itoa() // == "50", same as strconv.Itoa(i1)
 
-// Another example:
+// Another way of declaring
+i2 := goo.Int(2) // == 2
+
+// Library example:
 var str2 goo.String
 str2 = "myuppercasestring"
 str2.ToUpper() // == "MYUPPERCASESTRING", same as strings.ToUpper(str2)
@@ -45,6 +48,14 @@ str2.ToUpper() // == "MYUPPERCASESTRING", same as strings.ToUpper(str2)
 s1 := goo.FromSlice([]int{1, 2, 3})
 s1 = s1.Append(4, 5, 6)
 fmt.Println(s1) // == [1, 2, 3, 4, 5, 6], same as append(s1, 4, 5, 6)
+
+// With slice of strings
+str3 := goo.FromSlice([]string{"a", "b", "c"})
+fmt.Println(str3) // == ["a", "b", "c"]
+
+// with slice of goo.Strings
+str4 := goo.FromSlice([]String{"a", "b", "c"})
+fmt.Println(str4) // == ["a", "b", "c"]
 
 // Extension library example:
 s2 := goo.FromSlice([]int{1, 2, 3, 3})

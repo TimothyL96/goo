@@ -6,9 +6,31 @@ import (
 	"github.com/timothyl96/goo"
 )
 
-func TestFromSlice(t *testing.T) {
+func TestFromSlice1(t *testing.T) {
 	want := []int{1, 2, 3}
 	get := goo.FromSlice([]int{1, 2, 3})
+
+	for k, v := range get.ToSlice() {
+		if v != want[k] {
+			t.Errorf("FromSlice(%+v) = %+v; want %+v", want, get, want)
+		}
+	}
+}
+
+func TestFromSlice2(t *testing.T) {
+	want := []string{"a", "b", "c"}
+	get := goo.FromSlice([]string{"a", "b", "c"})
+
+	for k, v := range get.ToSlice() {
+		if v != want[k] {
+			t.Errorf("FromSlice(%+v) = %+v; want %+v", want, get, want)
+		}
+	}
+}
+
+func TestFromSlice3(t *testing.T) {
+	want := []goo.String{"a", "b", "c"}
+	get := goo.FromSlice([]goo.String{"a", "b", "c"})
 
 	for k, v := range get.ToSlice() {
 		if v != want[k] {

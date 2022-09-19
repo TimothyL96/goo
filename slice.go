@@ -13,6 +13,7 @@ func (s Slice[T]) ToSlice() []T {
 }
 
 // Append returns a new goo.Slice object with the input elements appended at the end
+// Not yet tested if type is a slice or map
 func (s Slice[T]) Append(elements ...T) Slice[T] {
 	return append(s, elements...)
 }
