@@ -26,41 +26,40 @@ Adding methods to 'builtin' types so we can simplify calling functions in OO way
 <br>
 
 ```Go
-// Example:
+// ##### Multiple ways to declare the variable
+// ### Base type
+t1 := goo.FromString("myString") // Using Goo function
+var t2 goo.Int = 30 // Using default = operator, but explicitly specify the type
+t3 := goo.Int(2) // Using explicit type conversion
+
+// ### Slice
+t4 := goo.FromSlice([]int{1, 2, 3}) // Using Goo function with builtin int
+t5 := goo.FromSlice([]goo.Int{1, 2, 3}) // Using Goo function with goo.Int
+var t6 goo.Slice[int] = []int{1, 2, 3} // Using default = operation, but explicitly specify the type with the generic type
+var t7 goo.Slice[goo.Int] = []goo.Int{1, 2, 3} // Same as above but with goo.Int
+
+// ##### Example:
+// ### Length:
 str1 := goo.FromString("myString")
 str1.length() // same as len(str1)
 
-// Another way of declaring custom type and perform arithmetics:
-var i1 goo.Int
-i1 = 30
+// ### Arithmetic and Itoa()
+i1 := goo.FromInt(3)
 i1 += 20
 i1.Itoa() // == "50", same as strconv.Itoa(i1)
 
-// Another way of declaring
-i2 := goo.Int(2) // == 2
-
-// Library example:
-var str2 goo.String
-str2 = "myuppercasestring"
+// ### ToUpper():
+var str2 goo.String = "myuppercasestring"
 str2.ToUpper() // == "MYUPPERCASESTRING", same as strings.ToUpper(str2)
 
-// Slice
+// ##### Slice
+// ### Append()
 s1 := goo.FromSlice([]int{1, 2, 3})
-s1 = s1.Append(4, 5, 6)
-fmt.Println(s1) // == [1, 2, 3, 4, 5, 6], same as append(s1, 4, 5, 6)
-
-// With slice of strings
-str3 := goo.FromSlice([]string{"a", "b", "c"})
-fmt.Println(str3) // == ["a", "b", "c"]
-
-// with slice of goo.Strings
-str4 := goo.FromSlice([]String{"a", "b", "c"})
-fmt.Println(str4) // == ["a", "b", "c"]
+s1 = s1.Append(4, 5, 6) // == [1, 2, 3, 4, 5, 6], same as s1 = append(s1, 4, 5, 6)
 
 // Extension library example:
 s2 := goo.FromSlice([]int{1, 2, 3, 3})
-s2 = s2.Unique()
-fmt.Println(s2) // == [1, 2, 3]
+s2 = s2.Unique() // == [1, 2, 3]
 
 ```
 
