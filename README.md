@@ -1,6 +1,6 @@
 # $$\textcolor{yellow}{\text{GOO}}$$
 
-## **G**olang standard library - the **OO** way
+## **G**olang standard library with Extension - the **OO** way
 
 <br>
 
@@ -27,19 +27,30 @@ Adding methods to 'builtin' types so we can simplify calling functions in OO way
 
 ```Go
 // Example:
-str := goo.FromString("myString")
-str.length() // same as len(str)
+str1 := goo.FromString("myString")
+str1.length() // same as len(str1)
+
+// Another way of declaring custom type and perform arithmetics:
+var i1 goo.Int
+i1 = 30
+i1 += 20
+i1.Itoa() // == "50", same as strconv.Itoa(i1)
 
 // Another example:
-var i goo.Int
-i = 30
-i += 20
-i.Itoa() // == "50", same as strconv.Itoa(i)
+var str2 goo.String
+str2 = "myuppercasestring"
+str2.ToUpper() // == "MYUPPERCASESTRING", same as strings.ToUpper(str2)
 
-// Another example:
-var s goo.String
-s = "myuppercasestring"
-s.ToUpper() // == "MYUPPERCASESTRING", same as strings.ToUpper(s)
+// Slice
+s1 := goo.FromSlice([]int{1, 2, 3})
+s1 = s1.Append(4, 5, 6)
+fmt.Println(s1) // == [1, 2, 3, 4, 5, 6], same as append(s1, 4, 5, 6)
+
+// Extension library example:
+s2 := goo.FromSlice([]int{1, 2, 3, 3})
+s2 = s2.Unique()
+fmt.Println(s2) // == [1, 2, 3]
+
 ```
 
 More:
@@ -63,11 +74,16 @@ The result below shows that the performances are similar when compared to builti
 
 ## <b>Running the source code</b> :runner:
 
-1. Run generate for code generation: `go generate ./...`
+There are 3 useful commands: 
 
-2. Run test: `go test -v ./...`
+Run `go generate` for code generation :point_right: `go generate ./...`
+    
+- This will generate most of the goo types e.g. string.go, int.go
+- Check the gen/ folder for more information
 
-3. Run benchmark: `go test -bench=Bench -run Bench -benchmem -benchtime 10s -v ./...`
+Run `go test` :point_right: `go test -v ./...`
+
+Run `go benchmark` :point_right: `go test -bench=Bench -run Bench -benchmem -benchtime 10s -v ./...`
 
 <br>
 
