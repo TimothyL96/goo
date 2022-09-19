@@ -28,15 +28,22 @@ Adding methods to 'builtin' types so we can simplify calling functions in OO way
 ```Go
 // ##### Multiple ways to declare the variable
 // ### Base type
-t1 := goo.FromString("myString") // Using Goo function
-var t2 goo.Int = 30 // Using default = operator, but explicitly specify the type
-t3 := goo.Int(2) // Using explicit type conversion
+// Using Goo function
+t1 := goo.FromString("myString")
+// Using default = operator, but explicitly specify the type
+var t2 goo.Int = 30
+// Using explicit type conversion
+t3 := goo.Int(2) 
 
 // ### Slice
-t4 := goo.FromSlice([]int{1, 2, 3}) // Using Goo function with builtin int
-t5 := goo.FromSlice([]goo.Int{1, 2, 3}) // Using Goo function with goo.Int
-var t6 goo.Slice[int] = []int{1, 2, 3} // Using default = operation, but explicitly specify the type with the generic type
-var t7 goo.Slice[goo.Int] = []goo.Int{1, 2, 3} // Same as above but with goo.Int
+// Using Goo function with builtin int
+t4 := goo.FromSlice([]int{1, 2, 3})
+// Using Goo function with goo.Int
+t5 := goo.FromSlice([]goo.Int{1, 2, 3})
+// Using default = operation, but explicitly specify the type with the generic type
+var t6 goo.Slice[int] = []int{1, 2, 3}
+// Same as above but with goo.Int
+var t7 goo.Slice[goo.Int] = []goo.Int{1, 2, 3}
 
 // ##### Example:
 // ### Length:
@@ -44,7 +51,7 @@ str1 := goo.FromString("myString")
 str1.length() // same as len(str1)
 
 // ### Arithmetic and Itoa()
-i1 := goo.FromInt(3)
+i1 := goo.FromInt(30)
 i1 += 20
 i1.Itoa() // == "50", same as strconv.Itoa(i1)
 
