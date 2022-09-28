@@ -21,30 +21,11 @@
 
 <br>
 
-Adding methods to 'builtin' types so we can simplify calling functions in OO way.
+Adding methods to '_builtin_' types so we can simplify calling functions in OO way.
 
 <br>
 
 ```Go
-// ##### Multiple ways to declare the variable
-// ### Base type
-// Using Goo function
-t1 := goo.FromString("myString")
-// Using default = operator, but explicitly specify the type
-var t2 goo.Int = 30
-// Using explicit type conversion
-t3 := goo.Int(2) 
-
-// ### Slice
-// Using Goo function with builtin int
-t4 := goo.FromSlice([]int{1, 2, 3})
-// Using Goo function with goo.Int
-t5 := goo.FromSlice([]goo.Int{1, 2, 3})
-// Using default = operation, but explicitly specify the type with the generic type
-var t6 goo.Slice[int] = []int{1, 2, 3}
-// Same as above but with goo.Int
-var t7 goo.Slice[goo.Int] = []goo.Int{1, 2, 3}
-
 // ##### Example:
 // ### Length:
 str1 := goo.FromString("myString")
@@ -53,22 +34,55 @@ str1.length() // same as len(str1)
 // ### Arithmetic and Itoa()
 i1 := goo.FromInt(30)
 i1 += 20
-i1.Itoa() // == "50", same as strconv.Itoa(i1)
+i1.Itoa() // same as strconv.Itoa(i1)
 
 // ### ToUpper():
 var str2 goo.String = "myuppercasestring"
-str2.ToUpper() // == "MYUPPERCASESTRING", same as strings.ToUpper(str2)
+str2.ToUpper() // same as strings.ToUpper(str2)
 
 // ##### Slice
 // ### Append()
 s1 := goo.FromSlice([]int{1, 2, 3})
-s1 = s1.Append(4, 5, 6) // == [1, 2, 3, 4, 5, 6], same as s1 = append(s1, 4, 5, 6)
+s1 = s1.Append(4, 5, 6) // same as s1 = append(s1, 4, 5, 6)
 
-// Extension library example:
-s2 := goo.FromSlice([]int{1, 2, 3, 3})
+// ##### Extension library example:
+// ### Unique()
+s2 := goo.FromSlice([]goo.Int{1, 1, 2, 3, 3})
 s2 = s2.Unique() // == [1, 2, 3]
 
+
+
+// ##### How to declare the variable:
+// ### Base type
+// Using Goo function
+t1 := goo.FromString("myString")
+
+// Using default = operator, but explicitly specify the type
+var t2 goo.Int = 30
+
+// Using explicit type conversion
+t3 := goo.Int(2) 
+
+// ### Declaring Slice
+// Using Goo function with builtin int
+t4 := goo.FromSlice([]int{1, 2, 3})
+// Same as above but with goo.Int
+t5 := goo.FromSlice([]goo.Int{1, 2, 3})
+
+// Using default = operation, but explicitly specify the type for the generic
+var t6 goo.Slice[int] = []int{1, 2, 3}
+// Same as above but with goo.Int
+var t7 goo.Slice[goo.Int] = []goo.Int{1, 2, 3}
+
+// ### Declaring Map
+// Coming soon
 ```
+
+<br>
+
+If typing `goo.` is too much, use dot import for this library.
+
+<br>
 
 More:
 
