@@ -27,6 +27,22 @@ func (s String) Trim(cutset String) String {
 }
 
 // Length will return builtin int type
-func (n String) Length() int {
-	return len(n)
+func (s String) Length() int {
+	return len(s)
+}
+
+// HasPrefix check if the string starts with input
+func (s String) HasPrefix(prefix string) Bool {
+	return Bool(strings.HasPrefix(s.ToString(), prefix))
+}
+
+// HasAnyPrefix check if the string starts with input
+func (s String) HasAnyPrefix(prefixes ...string) Bool {
+	for _, v := range prefixes {
+		if strings.HasPrefix(s.ToString(), v) {
+			return true
+		}
+	}
+
+	return false
 }

@@ -71,18 +71,34 @@ func BenchmarkStdTrim(b *testing.B) {
 	}
 }
 
-func BenchmarkLength(b *testing.B) {
-	gString := goo.FromString(",.ABC.,")
+func BenchmarkStringLength(b *testing.B) {
+	gString := goo.FromString(",.ABCDEFGOERINGROENGEROGNERIGOERGREGREGZXXZC ZX.,")
 
 	for i := 0; i < b.N; i++ {
 		_ = gString.Length()
 	}
 }
 
-func BenchmarkStdLength(b *testing.B) {
-	str := ",.ABC.,"
+func BenchmarkStdStringLength(b *testing.B) {
+	str := ",.ABCDEFGOERINGROENGEROGNERIGOERGREGREGZXXZC ZX.,"
 
 	for i := 0; i < b.N; i++ {
 		_ = len(str)
+	}
+}
+
+func BenchmarkHasPrefix(b *testing.B) {
+	gString := goo.FromString(",.ABC.,")
+
+	for i := 0; i < b.N; i++ {
+		_ = gString.HasPrefix(",.")
+	}
+}
+
+func BenchmarkStdHasPrefix(b *testing.B) {
+	str := ",.ABC.,"
+
+	for i := 0; i < b.N; i++ {
+		_ = strings.HasPrefix(str, ",.")
 	}
 }

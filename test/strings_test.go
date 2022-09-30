@@ -53,12 +53,32 @@ func TestTrim(t *testing.T) {
 	}
 }
 
-func TestLength(t *testing.T) {
+func TestStringLength(t *testing.T) {
 	want := 3
 	gString := goo.FromString("abc")
 	get := gString.Length()
 
 	if get != want {
 		t.Errorf("Length() = %d; want %d", get, want)
+	}
+}
+
+func TestHasPrefix(t *testing.T) {
+	want := true
+	gString := goo.FromString("[]abc")
+	get := gString.HasPrefix("[]")
+
+	if get.ToBool() != want {
+		t.Errorf("HasPrefix() = %t; want %t", get, want)
+	}
+}
+
+func TestHasAnyPrefix(t *testing.T) {
+	want := true
+	gString := goo.FromString("[]abc")
+	get := gString.HasAnyPrefix("zxc", "123", "[]", "qqq")
+
+	if get.ToBool() != want {
+		t.Errorf("HasAnyPrefix() = %t; want %t", get, want)
 	}
 }
