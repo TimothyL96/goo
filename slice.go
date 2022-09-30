@@ -2,6 +2,8 @@ package goo
 
 import (
 	"fmt"
+
+	"golang.org/x/exp/constraints"
 )
 
 type Slice[T any] []T
@@ -36,7 +38,6 @@ func (s Slice[T]) Length() int {
 // Does not work for map, slice, function as it is shallow checking and
 // they will always have different pointers in a slice
 func (s Slice[T]) Unique() Slice[T] {
-
 	if s.Length() <= 1 {
 		return s
 	}
@@ -65,4 +66,9 @@ func (s Slice[T]) Unique() Slice[T] {
 	}
 
 	return newSlice
+}
+
+// Unique function that is not tied to a slice
+func Unique[T constraints.Ordered](s Slice[T]) Slice[T] {
+	return s.Unique()
 }

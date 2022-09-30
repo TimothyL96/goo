@@ -1,6 +1,6 @@
 # $$\textcolor{yellow}{\text{GOO}}$$
 
-## **G**olang standard library with Extension - the **OO** way
+## **G**olang standard library Extension + the **OO** way
 
 <br>
 
@@ -21,9 +21,31 @@
 
 <br>
 
-Adding methods to '_builtin_' types so we can simplify calling functions in OO way.
+There are 2 ways to use this library.
+
+1. Use the methods added to '_builtin_' types so we can simplify calling functions in OO way.
+
+    This includes builtin functions + extended functions like `unique()`.
+
+    <br>
+
+ 2. :exclamation: Or, simply apply the extended functions in Go style.
 
 <br>
+
+Example - Extended functions in Go Style:
+
+```Go
+s := []int{1, 1, 1, 2, 3, 3}
+_ = goo.Unique(s) // returns {1, 2, 3}
+
+toGet := []string{"a", "a", "b", "b", "b", "b", "c"}
+_ = goo.Unique(toGet) // returns {a, b, c}
+```
+
+<br>
+
+Example - OOP Style:
 
 ```Go
 // ##### Example:

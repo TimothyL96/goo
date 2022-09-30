@@ -200,3 +200,23 @@ func TestSliceUniqueMap(t *testing.T) {
 		t.Errorf("Unique(%+v) = len %d; want %v", toGet, len(get), want)
 	}
 }
+
+func TestSliceUniqueIntFunction(t *testing.T) {
+	want := []int{1, 2, 3}
+	toGet := []int{1, 1, 1, 2, 3, 3}
+	get := goo.Unique(toGet)
+
+	if len(get.ToSlice()) != len(want) {
+		t.Errorf("Unique(%+v) = len %d; want %v", toGet, len(get), len(want))
+	}
+}
+
+func TestSliceUniqueStringFunction(t *testing.T) {
+	want := []goo.String{"a", "b", "c"}
+	toGet := []goo.String{"a", "a", "b", "b", "b", "b", "c"}
+	get := goo.Unique(toGet)
+
+	if len(get.ToSlice()) != len(want) {
+		t.Errorf("Unique(%+v) = len %d; want %v", toGet, len(get), len(want))
+	}
+}
