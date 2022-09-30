@@ -75,7 +75,9 @@ var t6 goo.Slice[int] = []int{1, 2, 3}
 var t7 goo.Slice[goo.Int] = []goo.Int{1, 2, 3}
 
 // ### Declaring Map
-// Coming soon
+t8 := goo.FromMap(make(map[int]int))
+var t9 goo.Map[int, struct{}] = make(map[int]struct{})
+
 ```
 
 <br>
