@@ -4,7 +4,7 @@
 
 <br>
 
-> The library you never knew you needed :bulb:
+> The library you never knew you needed :speak_no_evil:
 
 <br>
 
@@ -21,7 +21,7 @@
 
 <br>
 
-There are 2 ways to use this library.
+There are 2 ways to use this library :bulb:
 
 1. Use the methods added to '_builtin_' types so we can simplify calling functions in OO way.
 
@@ -70,37 +70,6 @@ s1 = s1.Append(4, 5, 6) // same as s1 = append(s1, 4, 5, 6)
 s2 := goo.FromSlice([]goo.Int{1, 1, 2, 3, 3})
 s2 = s2.Unique() // == [1, 2, 3]
 
-
-
-// ##### How to declare the variable:
-// ### Base type
-// Using Goo function
-t1 := goo.FromString("myString")
-
-// Using default = operator, but explicitly specify the type
-var t2 goo.Int = 30
-
-// Using explicit type conversion
-t3 := goo.Int(2) 
-
-// ### Declaring Slice
-// Using NewSlice (recommended)
-mySlice := goo.NewSlice(1, 2, 3)
-
-// Using Goo function with builtin int
-t4 := goo.FromSlice([]int{1, 2, 3})
-// Same as above but with goo.Int
-t5 := goo.FromSlice([]goo.Int{1, 2, 3})
-
-// Using default = operation, but explicitly specify the type for the generic
-var t6 goo.Slice[int] = []int{1, 2, 3}
-// Same as above but with goo.Int
-var t7 goo.Slice[goo.Int] = []goo.Int{1, 2, 3}
-
-// ### Declaring Map
-t8 := goo.FromMap(make(map[int]int))
-var t9 goo.Map[int, struct{}] = make(map[int]struct{})
-
 ```
 
 <br>
@@ -113,6 +82,40 @@ More:
 
 How to use Goo:
 [GOO Example](https://github.com/TimothyL96/goo-example)
+
+<br>
+
+:grey_question: How to declare the variable:
+
+```Go
+// Using Goo function
+t1 := goo.FromString("myString")
+
+// Using default = operator, but explicitly specify the type
+var t2 goo.Int = 30
+
+// Using explicit type conversion
+t3 := goo.Int(2) 
+
+
+// ### Declaring Slice
+// Using NewSlice (recommended) which returns a goo.Slice
+mySlice := goo.NewSlice(1, 2, 3)
+
+// Using Goo function with Int
+t5 := goo.FromSlice([]goo.Int{1, 2, 3})
+
+// Using default = operation, but explicitly specify the type for the generic
+var t6 goo.Slice[int] = []int{1, 2, 3}
+
+// ### Declaring Map
+t8 := goo.FromMap(make(map[int]int))
+
+// or
+var t9 goo.Map[int, struct{}] = make(map[int]struct{})
+```
+
+<br>
 
 ---  
 
@@ -143,5 +146,5 @@ Run `go benchmark` :point_right: `go test -bench=Bench -run Bench -benchmem -ben
 
 ---  
 
-## <b>Contributing</b>
+## <b>Contributing</b> :memo:
 Feel free to raise issue or PR
