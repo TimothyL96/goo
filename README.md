@@ -12,12 +12,15 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/bbc9b7ccb927732ec239/maintainability)](https://codeclimate.com/github/TimothyL96/goo/maintainability)
 [![CodeFactor](https://www.codefactor.io/repository/github/timothyl96/goo/badge)](https://www.codefactor.io/repository/github/timothyl96/goo)
 [![Go Report Card](https://goreportcard.com/badge/github.com/timothyl96/goo)](https://goreportcard.com/report/github.com/timothyl96/goo)
-[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/26b98e19151f471fbd3729dbbe56c2d8)](https://www.codacy.com/gh/TimothyL96/goo/dashboard?utm_source=github.com&utm_medium=referral&utm_content=TimothyL96/goo&utm_campaign=Badge_Coverage)
-[![codecov](https://codecov.io/gh/TimothyL96/goo/branch/master/graph/badge.svg?token=o61pQVm2m9)](https://codecov.io/gh/TimothyL96/goo)
+[![Go Reference](https://pkg.go.dev/badge/github.com/timothyl96/goo.svg)](https://pkg.go.dev/github.com/timothyl96/goo)
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/TimothyL96/goo/tree/master.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/gh/TimothyL96/goo/tree/master)
-[![Travis Build Status](https://app.travis-ci.com/TimothyL96/goo.svg?branch=master)](https://app.travis-ci.com/TimothyL96/goo)
+[![Travis Build Status](https://img.shields.io/travis/com/TimothyL96/goo?logo=travis)](https://app.travis-ci.com/TimothyL96/goo)
 [![DeepSource](https://deepsource.io/gh/TimothyL96/goo.svg/?label=active+issues&show_trend=true&token=lc6AhgyQ_EjizXaVrr2ehW_K)](https://deepsource.io/gh/TimothyL96/goo/?ref=repository-badge)
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/26b98e19151f471fbd3729dbbe56c2d8)](https://www.codacy.com/gh/TimothyL96/goo/dashboard?utm_source=github.com&utm_medium=referral&utm_content=TimothyL96/goo&utm_campaign=Badge_Coverage)
+[![codecov](https://codecov.io/gh/TimothyL96/goo/branch/master/graph/badge.svg?token=o61pQVm2m9)](https://codecov.io/gh/TimothyL96/goo)
+![GitHub](https://img.shields.io/github/license/TimothyL96/goo)
 
 <br>
 
@@ -35,15 +38,23 @@ Example - Extended functions in Go Style:
 
 ```Go
 s := []int{1, 1, 1, 2, 3, 3}
-_ = goo.Unique(s) // returns {1, 2, 3}
+goo.Unique(s) // returns {1, 2, 3}
 
+// With String
 toGet := []string{"a", "a", "b", "b", "b", "b", "c"}
-_ = goo.Unique(toGet) // returns {a, b, c}
+goo.Unique(toGet) // returns {a, b, c}
+
+// Coming soon
+goo.ForEach(func(it) { fmt.Println(it) })
 ```
 
 <br>
 
-Example - OOP Style:
+You can also use it in OOP style. 
+
+<br>
+
+Example:
 
 ```Go
 // ##### Example:
