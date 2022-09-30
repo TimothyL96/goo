@@ -15,7 +15,7 @@ requestInfoReplyComment: >
   - Tell me more !
   - Ah no! young blade! That was a trifle short!
 
-requestInfoLabelToAdd: more-info-needed
+requestInfoLabelToAdd: needs-more-info
 
 # Comment to be posted to on first time issues
 newIssueWelcomeComment: >
