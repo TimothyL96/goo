@@ -20,6 +20,7 @@ requestInfoLabelToAdd: needs-more-info
 # Comment to be posted to on first time issues
 newIssueWelcomeComment: >
   Thanks for opening your first issue here! Be sure to follow the issue template!
+
   ![GIF](https://media.giphy.com/media/vQqeT3AYg8S5O/giphy.gif)
 
 # Configuration for new-pr-welcome - https://github.com/behaviorbot/new-pr-welcome
@@ -27,6 +28,7 @@ newIssueWelcomeComment: >
 # Comment to be posted to on PRs from first time contributors in your repository
 newPRWelcomeComment: >
   Thanks for opening this pull request! Please check out our contributing guidelines.
+  
   ![GIF](https://media.giphy.com/media/ebFG4jcnC1Ny8/giphy.gif)
 
 # Configuration for first-pr-merge - https://github.com/behaviorbot/first-pr-merge
