@@ -1,12 +1,19 @@
 # Configuration for welcome - https://github.com/behaviorbot/welcome
 
 # Configuration for new-issue-welcome - https://github.com/behaviorbot/new-issue-welcome
+# Configuration for request-info - https://github.com/behaviorbot/request-info
+# Configuration for update-docs - https://github.com/behaviorbot/update-docs
 
 updateDocsComment: >
-  Thanks for opening this pull request! The maintainers of this repository would appreciate it if you would update some of our documentation based on your changes.
+  Thanks for opening this pull request! I would appreciate it if you would update some of our documentation based on your changes.
+
+updateDocsTargetFiles:
+  - README
 
 requestInfoReplyComment: >
-  We would appreciate it if you could provide us with more info about this issue/pr!
+  - We would appreciate it if you could provide us with more info about this issue/pr!
+  - Tell me more !
+  - Ah no! young blade! That was a trifle short!
 
 requestInfoLabelToAdd: more-info-needed
 
