@@ -41,7 +41,7 @@ func (s Slice[T]) Unique() Slice[T] {
 		return s
 	}
 
-	// Check without using reflection package
+	// Check without using reflection package (fmt still uses reflection underneath)
 	var checkType T
 	elementType := FromString(fmt.Sprintf("%T", checkType))
 
