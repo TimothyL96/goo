@@ -211,6 +211,26 @@ func TestSliceUniqueIntFunction(t *testing.T) {
 	}
 }
 
+func TestSliceUniqueIntLengthZero(t *testing.T) {
+	want := []int{}
+	toGet := []int{}
+	get := goo.Unique(toGet)
+
+	if len(get.ToSlice()) != len(want) {
+		t.Errorf("Unique(%+v) = len %d; want %v", toGet, len(get), len(want))
+	}
+}
+
+func TestSliceUniqueIntLengthOne(t *testing.T) {
+	want := []int{1}
+	toGet := []int{1}
+	get := goo.Unique(toGet)
+
+	if len(get.ToSlice()) != len(want) {
+		t.Errorf("Unique(%+v) = len %d; want %v", toGet, len(get), len(want))
+	}
+}
+
 func TestSliceUniqueStringFunction(t *testing.T) {
 	want := []goo.String{"a", "b", "c"}
 	toGet := []goo.String{"a", "a", "b", "b", "b", "b", "c"}
