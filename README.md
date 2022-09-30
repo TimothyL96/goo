@@ -12,7 +12,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/bbc9b7ccb927732ec239/maintainability)](https://codeclimate.com/github/TimothyL96/goo/maintainability)
 [![CodeFactor](https://www.codefactor.io/repository/github/timothyl96/goo/badge)](https://www.codefactor.io/repository/github/timothyl96/goo)
 [![Go Report Card](https://goreportcard.com/badge/github.com/timothyl96/goo)](https://goreportcard.com/report/github.com/timothyl96/goo)
-[![Go Reference](https://pkg.go.dev/badge/github.com/timothyl96/goo.svg)](https://pkg.go.dev/github.com/timothyl96/goo)
+[![Go Reference](https://pkg.go.dev/badge/github.com/timothyl96/goo.svg)](https://pkg.go.dev/github.com/timothyl96/goo#section-documentation)
 
 [![CircleCI](https://img.shields.io/circleci/build/github/TimothyL96/goo?label=circleci&logo=circleci)](https://dl.circleci.com/status-badge/redirect/gh/TimothyL96/goo/tree/master)
 [![Travis Build Status](https://img.shields.io/travis/com/TimothyL96/goo?logo=travis&label=travis-ci)](https://app.travis-ci.com/TimothyL96/goo)
@@ -50,9 +50,7 @@ goo.ForEach(func(it) { fmt.Println(it) })
 
 <br>
 
-You can also use it in OOP style. 
-
-<br>
+You can also use it in OOP style.
 
 Example:
 
@@ -85,7 +83,13 @@ s2 = s2.Unique() // == [1, 2, 3]
 
 <br>
 
-If typing `goo.` is too much, use dot import for this library.
+If typing `goo.` is too much, use dot import for this library:
+
+```Go
+import (
+	. "github.com/timothyl96/goo"
+)
+```
 
 <br>
 
