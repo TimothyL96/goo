@@ -76,7 +76,7 @@ s1 = s1.Append(4, 5, 6) // same as s1 = append(s1, 4, 5, 6)
 
 // ##### Extension library example:
 // ### Unique()
-s2 := goo.FromSlice([]goo.Int{1, 1, 2, 3, 3})
+s2 := goo.NewSlice(1, 1, 2, 3, 3)
 s2 = s2.Unique() // == [1, 2, 3]
 
 ```
@@ -93,14 +93,7 @@ import (
 
 <br>
 
-More:
-
-How to use Goo:
-[GOO Example](https://github.com/TimothyL96/goo-example)
-
-<br>
-
-:grey_question: How to declare the variable:
+:question::grey_question: How to declare a variable:
 
 ```Go
 // Using Goo function
@@ -129,6 +122,14 @@ t8 := goo.FromMap(make(map[int]int))
 // or
 var t9 goo.Map[int, struct{}] = make(map[int]struct{})
 ```
+
+
+<br>
+
+More:
+
+How to use Goo:
+[GOO Example](https://github.com/TimothyL96/goo-example)
 
 <br>
 
