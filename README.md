@@ -64,6 +64,9 @@ var t2 goo.Int = 30
 t3 := goo.Int(2) 
 
 // ### Declaring Slice
+// Using NewSlice (recommended)
+mySlice := goo.NewSlice(1, 2, 3)
+
 // Using Goo function with builtin int
 t4 := goo.FromSlice([]int{1, 2, 3})
 // Same as above but with goo.Int
