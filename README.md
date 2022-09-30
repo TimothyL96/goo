@@ -25,9 +25,7 @@ There are 2 ways to use this library.
 
 1. Use the methods added to '_builtin_' types so we can simplify calling functions in OO way.
 
-    This includes builtin functions + extended functions like `unique()`.
-
-    <br>
+    This includes builtin + extended functions like `unique()`.
 
  2. :exclamation: Or, simply apply the extended functions in Go style.
 
@@ -115,8 +113,6 @@ More:
 
 How to use Goo:
 [GOO Example](https://github.com/TimothyL96/goo-example)
-
-<br>
 
 ---  
 
