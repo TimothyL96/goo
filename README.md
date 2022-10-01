@@ -45,7 +45,7 @@ toGet := []string{"a", "a", "b", "b", "b", "b", "c"}
 goo.Unique(toGet) // returns {a, b, c}
 
 // ForEach
-goo.ForEach(func(it) { fmt.Println(it) })
+goo.ForEach(func(i int) { fmt.Println(i) })
 ```
 
 <br>
