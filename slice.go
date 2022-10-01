@@ -2,8 +2,6 @@ package goo
 
 import (
 	"fmt"
-
-	"golang.org/x/exp/constraints"
 )
 
 type Slice[T any] []T
@@ -66,9 +64,4 @@ func (s Slice[T]) Unique() Slice[T] {
 	}
 
 	return newSlice
-}
-
-// Unique function that is not tied to a slice
-func Unique[T constraints.Ordered](s Slice[T]) Slice[T] {
-	return s.Unique()
 }
