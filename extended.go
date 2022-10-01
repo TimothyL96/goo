@@ -6,3 +6,8 @@ import "golang.org/x/exp/constraints"
 func Unique[T constraints.Ordered](s Slice[T]) Slice[T] {
 	return s.Unique()
 }
+
+// HasAnyPrefix returns true if the given string matched any of the prefixes
+func HasAnyPrefix(s String, prefixes ...string) Bool {
+	return s.HasAnyPrefix(prefixes...)
+}

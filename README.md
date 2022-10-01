@@ -71,13 +71,17 @@ str2.ToUpper() // same as strings.ToUpper(str2)
 
 // ##### Slice
 // ### Append()
-s1 := goo.FromSlice([]int{1, 2, 3})
+s1 := goo.NewSlice(1, 2, 3)
 s1 = s1.Append(4, 5, 6) // same as s1 = append(s1, 4, 5, 6)
 
 // ##### Extension library example:
 // ### Unique()
 s2 := goo.NewSlice(1, 1, 2, 3, 3)
 s2 = s2.Unique() // == [1, 2, 3]
+
+// ### HasAnyPrefix()
+s3 := goo.FromString("-abcdef")
+_ = s3.HasAnyPrefix("x", "'", "=", "-") // == true
 
 ```
 

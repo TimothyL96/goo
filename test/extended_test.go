@@ -45,3 +45,14 @@ func TestSliceUniqueStringFunction(t *testing.T) {
 		t.Errorf("Unique(%+v) = len %d; want %v", toGet, len(get), len(want))
 	}
 }
+
+func TestStringHasAnyPrefix(t *testing.T) {
+	s := goo.FromString("-asdasd")
+	pre := goo.NewSlice("=", "-", ":", "a")
+	get := goo.HasAnyPrefix(s, pre...)
+	want := true
+
+	if get.ToBool() != want {
+		t.Errorf("HasAnyPrefix(%s, %s) = %t; want %t", s, pre, get, want)
+	}
+}
