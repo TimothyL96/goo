@@ -107,7 +107,7 @@ t3 := goo.Int(2)
 
 
 // ### Declaring Slice
-// Using NewSlice (recommended) which returns a goo.Slice
+// Using NewSlice which returns a goo.Slice (recommended)
 mySlice := goo.NewSlice(1, 2, 3)
 
 // Using Goo function with Int
@@ -117,12 +117,16 @@ t5 := goo.FromSlice([]goo.Int{1, 2, 3})
 var t6 goo.Slice[int] = []int{1, 2, 3}
 
 // ### Declaring Map
-t8 := goo.FromMap(make(map[int]int))
+// Capacity of 1, key int, value int - Recommended
+t8 := goo.NewMap[int, int](1)
+t8[1] = 1
 
-// or
+// Convert from builtin map
+t9 := goo.FromMap(make(map[int]int))
+
+// or using var keyword
 var t9 goo.Map[int, struct{}] = make(map[int]struct{})
 ```
-
 
 <br>
 

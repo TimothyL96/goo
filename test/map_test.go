@@ -21,6 +21,20 @@ func TestFromMap(t *testing.T) {
 	}
 }
 
+func TestNewMap(t *testing.T) {
+	want := make(map[int]int)
+	want[1] = 1
+
+	get := goo.NewMap[int, int](1)
+	get[1] = 1
+
+	for k := range get {
+		if _, ok := get[k]; !ok {
+			t.Errorf("NewMap() = %v; want %v", get, want)
+		}
+	}
+}
+
 func TestToMap(t *testing.T) {
 	want := make(map[int]int)
 	want[0] = 1
