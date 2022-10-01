@@ -1,6 +1,7 @@
 package test
 
 import (
+	"fmt"
 	"testing"
 
 	"github.com/timothyl96/goo"
@@ -199,4 +200,16 @@ func TestSliceUniqueMap(t *testing.T) {
 	if len(get.ToSlice()) != want {
 		t.Errorf("Unique(%+v) = len %d; want %v", toGet, len(get), want)
 	}
+}
+
+func TestSliceForEach(t *testing.T) {
+
+	defer func() {
+		if r := recover(); r != nil {
+			t.Errorf("Slice.ForEach(); panicked")
+		}
+	}()
+
+	toGet := goo.NewSlice(1, 2, 3)
+	toGet.ForEach(func(i int) { fmt.Println(i) })
 }

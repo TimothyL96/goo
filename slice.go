@@ -65,3 +65,10 @@ func (s Slice[T]) Unique() Slice[T] {
 
 	return newSlice
 }
+
+// ForEach loop through each element and perform an action with the given function
+func (s Slice[T]) ForEach(exec func(T)) {
+	for k := range s {
+		exec(s[k])
+	}
+}

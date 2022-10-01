@@ -44,7 +44,7 @@ goo.Unique(s) // returns {1, 2, 3}
 toGet := []string{"a", "a", "b", "b", "b", "b", "c"}
 goo.Unique(toGet) // returns {a, b, c}
 
-// Coming soon
+// ForEach
 goo.ForEach(func(it) { fmt.Println(it) })
 ```
 
