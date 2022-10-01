@@ -1,6 +1,7 @@
 package test
 
 import (
+	"fmt"
 	"testing"
 
 	"github.com/timothyl96/goo"
@@ -55,4 +56,16 @@ func TestFuncStringHasAnyPrefix(t *testing.T) {
 	if get.ToBool() != want {
 		t.Errorf("HasAnyPrefix(%s, %s) = %t; want %t", s, pre, get, want)
 	}
+}
+
+func TestFuncSliceForEach(t *testing.T) {
+
+	defer func() {
+		if r := recover(); r != nil {
+			t.Errorf("ForEach(); panicked")
+		}
+	}()
+
+	toGet := goo.NewSlice(1, 2, 3)
+	goo.ForEach(toGet, func(i int) { fmt.Println(i) })
 }

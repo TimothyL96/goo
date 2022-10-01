@@ -37,15 +37,15 @@ There are 2 ways to use this library :bulb:
 Example - Extended functions in Go Style:
 
 ```Go
-s := []int{1, 1, 1, 2, 3, 3}
-goo.Unique(s) // returns {1, 2, 3}
+myInts := []int{1, 1, 1, 2, 3, 3}
+goo.Unique(myInts) // returns {1, 2, 3}
 
 // With String
-toGet := []string{"a", "a", "b", "b", "b", "b", "c"}
-goo.Unique(toGet) // returns {a, b, c}
+myStrs := []string{"a", "a", "b", "b", "b", "b", "c"}
+goo.Unique(myStrs) // returns {a, b, c}
 
 // ForEach
-goo.ForEach(func(i int) { fmt.Println(i) })
+goo.ForEach(myInts, func(i int) { fmt.Println(i) })
 ```
 
 <br>
@@ -79,9 +79,13 @@ s1 = s1.Append(4, 5, 6) // same as s1 = append(s1, 4, 5, 6)
 s2 := goo.NewSlice(1, 1, 2, 3, 3)
 s2 = s2.Unique() // == [1, 2, 3]
 
+// ### ForEach()
+s3 := goo.NewSlice(1, 2, 3)
+s3 = s3.ForEach(func(i int) { fmt.Println(i) }) // Prints each 1,2,3 in new line
+
 // ### HasAnyPrefix()
-s3 := goo.FromString("-abcdef")
-_ = s3.HasAnyPrefix("x", "'", "=", "-") // == true
+s4 := goo.FromString("-abcdef")
+_ = s4.HasAnyPrefix("x", "'", "=", "-") // == true
 
 ```
 

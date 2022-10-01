@@ -11,3 +11,7 @@ func Unique[T constraints.Ordered](s Slice[T]) Slice[T] {
 func HasAnyPrefix(s String, prefixes ...string) Bool {
 	return s.HasAnyPrefix(prefixes...)
 }
+
+func ForEach[T any](s Slice[T], exec func(T)) {
+	s.ForEach(exec)
+}
