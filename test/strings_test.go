@@ -6,7 +6,7 @@ import (
 	"github.com/timothyl96/goo"
 )
 
-func TestSplit(t *testing.T) {
+func TestStringSplit(t *testing.T) {
 	toSplit := "a.b.c"
 	want := []string{"a", "b", "c"}
 	gString := goo.FromString(toSplit)
@@ -23,7 +23,7 @@ func TestSplit(t *testing.T) {
 	}
 }
 
-func TestToUpper(t *testing.T) {
+func TestStringToUpper(t *testing.T) {
 	want := "ABC"
 	gString := goo.FromString("abc")
 	get := gString.ToUpper()
@@ -33,7 +33,7 @@ func TestToUpper(t *testing.T) {
 	}
 }
 
-func TestToLower(t *testing.T) {
+func TestStringToLower(t *testing.T) {
 	want := "abc"
 	gString := goo.FromString("ABC")
 	get := gString.ToLower()
@@ -43,7 +43,7 @@ func TestToLower(t *testing.T) {
 	}
 }
 
-func TestTrim(t *testing.T) {
+func TestStringTrim(t *testing.T) {
 	want := "ABC"
 	gString := goo.FromString(",.ABC.,")
 	get := gString.Trim(",.")
@@ -63,7 +63,7 @@ func TestStringLength(t *testing.T) {
 	}
 }
 
-func TestHasPrefix(t *testing.T) {
+func TestStringHasPrefix(t *testing.T) {
 	want := true
 	gString := goo.FromString("[]abc")
 	get := gString.HasPrefix("[]")
@@ -73,7 +73,7 @@ func TestHasPrefix(t *testing.T) {
 	}
 }
 
-func TestHasAnyPrefix(t *testing.T) {
+func TestStringHasAnyPrefix(t *testing.T) {
 	want := true
 	gString := goo.FromString("[]abc")
 	get := gString.HasAnyPrefix("zxc", "123", "[]", "qqq")

@@ -73,7 +73,7 @@ func TestNewSliceGoo(t *testing.T) {
 	}
 }
 
-func TestAppend(t *testing.T) {
+func TestSliceAppend(t *testing.T) {
 	want := []int{1, 2, 3, 4, 5, 6}
 	toAppend := []int{4, 5, 6}
 	get := goo.FromSlice([]int{1, 2, 3}).Append(toAppend...)
@@ -199,6 +199,25 @@ func TestSliceUniqueMap(t *testing.T) {
 
 	if len(get.ToSlice()) != want {
 		t.Errorf("Unique(%+v) = len %d; want %v", toGet, len(get), want)
+	}
+}
+func TestSliceUniqueIntLengthZero(t *testing.T) {
+	want := []int{}
+	toGet := goo.NewSlice[int]()
+	get := toGet.Unique()
+
+	if len(get.ToSlice()) != len(want) {
+		t.Errorf("Unique(%+v) = len %d; want %v", toGet, len(get), len(want))
+	}
+}
+
+func TestSliceUniqueIntLengthOne(t *testing.T) {
+	want := []int{1}
+	toGet := goo.NewSlice(1)
+	get := toGet.Unique()
+
+	if len(get.ToSlice()) != len(want) {
+		t.Errorf("Unique(%+v) = len %d; want %v", toGet, len(get), len(want))
 	}
 }
 

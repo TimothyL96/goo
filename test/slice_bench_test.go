@@ -6,7 +6,7 @@ import (
 	"github.com/timothyl96/goo"
 )
 
-func BenchmarkAppend(b *testing.B) {
+func BenchmarkSliceAppend(b *testing.B) {
 	x := goo.FromSlice([]int{1, 2, 3})
 
 	for i := 0; i < b.N; i++ {
@@ -14,7 +14,7 @@ func BenchmarkAppend(b *testing.B) {
 	}
 }
 
-func BenchmarkStdAppend(b *testing.B) {
+func BenchmarkSliceStdAppend(b *testing.B) {
 	x := []int{1, 2, 3}
 
 	for i := 0; i < b.N; i++ {
@@ -30,7 +30,7 @@ func BenchmarkSliceLength(b *testing.B) {
 	}
 }
 
-func BenchmarkStdSliceLength(b *testing.B) {
+func BenchmarkSliceStdLength(b *testing.B) {
 	x := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
 
 	for i := 0; i < b.N; i++ {

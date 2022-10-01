@@ -6,7 +6,7 @@ import (
 	"github.com/timothyl96/goo"
 )
 
-func TestSliceUniqueIntFunction(t *testing.T) {
+func TestFuncSliceUniqueInt(t *testing.T) {
 	want := []int{1, 2, 3}
 	toGet := []int{1, 1, 1, 2, 3, 3}
 	get := goo.Unique(toGet)
@@ -16,7 +16,7 @@ func TestSliceUniqueIntFunction(t *testing.T) {
 	}
 }
 
-func TestSliceUniqueIntLengthZero(t *testing.T) {
+func TestFuncSliceUniqueIntLengthZero(t *testing.T) {
 	want := []int{}
 	toGet := []int{}
 	get := goo.Unique(toGet)
@@ -26,7 +26,7 @@ func TestSliceUniqueIntLengthZero(t *testing.T) {
 	}
 }
 
-func TestSliceUniqueIntLengthOne(t *testing.T) {
+func TestFuncSliceUniqueIntLengthOne(t *testing.T) {
 	want := []int{1}
 	toGet := []int{1}
 	get := goo.Unique(toGet)
@@ -36,7 +36,7 @@ func TestSliceUniqueIntLengthOne(t *testing.T) {
 	}
 }
 
-func TestSliceUniqueStringFunction(t *testing.T) {
+func TestFuncSliceUniqueString(t *testing.T) {
 	want := []goo.String{"a", "b", "c"}
 	toGet := []goo.String{"a", "a", "b", "b", "b", "b", "c"}
 	get := goo.Unique(toGet)
@@ -46,7 +46,7 @@ func TestSliceUniqueStringFunction(t *testing.T) {
 	}
 }
 
-func TestStringHasAnyPrefix(t *testing.T) {
+func TestFuncStringHasAnyPrefix(t *testing.T) {
 	s := goo.FromString("-asdasd")
 	pre := goo.NewSlice("=", "-", ":", "a")
 	get := goo.HasAnyPrefix(s, pre...)

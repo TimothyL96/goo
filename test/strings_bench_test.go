@@ -7,7 +7,7 @@ import (
 	"github.com/timothyl96/goo"
 )
 
-func BenchmarkSplit(b *testing.B) {
+func BenchmarkStringSplit(b *testing.B) {
 	str := goo.FromString("a.b.c")
 
 	for i := 0; i < b.N; i++ {
@@ -15,7 +15,7 @@ func BenchmarkSplit(b *testing.B) {
 	}
 }
 
-func BenchmarkStdSplit(b *testing.B) {
+func BenchmarkStringStdSplit(b *testing.B) {
 	str := "a.b.c"
 
 	for i := 0; i < b.N; i++ {
@@ -23,7 +23,7 @@ func BenchmarkStdSplit(b *testing.B) {
 	}
 }
 
-func BenchmarkToUpper(b *testing.B) {
+func BenchmarkStringToUpper(b *testing.B) {
 	str := goo.FromString("abc")
 
 	for i := 0; i < b.N; i++ {
@@ -31,7 +31,7 @@ func BenchmarkToUpper(b *testing.B) {
 	}
 }
 
-func BenchmarkStdToUpper(b *testing.B) {
+func BenchmarkStringStdToUpper(b *testing.B) {
 	str := "abc"
 
 	for i := 0; i < b.N; i++ {
@@ -39,7 +39,7 @@ func BenchmarkStdToUpper(b *testing.B) {
 	}
 }
 
-func BenchmarkToLower(b *testing.B) {
+func BenchmarkStringToLower(b *testing.B) {
 	str := goo.FromString("abc")
 
 	for i := 0; i < b.N; i++ {
@@ -47,7 +47,7 @@ func BenchmarkToLower(b *testing.B) {
 	}
 }
 
-func BenchmarkStdToLower(b *testing.B) {
+func BenchmarkStringStdToLower(b *testing.B) {
 	str := "abc"
 
 	for i := 0; i < b.N; i++ {
@@ -55,7 +55,7 @@ func BenchmarkStdToLower(b *testing.B) {
 	}
 }
 
-func BenchmarkTrim(b *testing.B) {
+func BenchmarkStringTrim(b *testing.B) {
 	gString := goo.FromString(",.ABC.,")
 
 	for i := 0; i < b.N; i++ {
@@ -63,7 +63,7 @@ func BenchmarkTrim(b *testing.B) {
 	}
 }
 
-func BenchmarkStdTrim(b *testing.B) {
+func BenchmarkStringStdTrim(b *testing.B) {
 	str := ",.ABC.,"
 
 	for i := 0; i < b.N; i++ {
@@ -79,7 +79,7 @@ func BenchmarkStringLength(b *testing.B) {
 	}
 }
 
-func BenchmarkStdStringLength(b *testing.B) {
+func BenchmarkStringStdLength(b *testing.B) {
 	str := ",.ABCDEFGOERINGROENGEROGNERIGOERGREGREGZXXZC ZX.,"
 
 	for i := 0; i < b.N; i++ {
@@ -87,7 +87,7 @@ func BenchmarkStdStringLength(b *testing.B) {
 	}
 }
 
-func BenchmarkHasPrefix(b *testing.B) {
+func BenchmarkStringHasPrefix(b *testing.B) {
 	gString := goo.FromString(",.ABC.,")
 
 	for i := 0; i < b.N; i++ {
@@ -95,7 +95,7 @@ func BenchmarkHasPrefix(b *testing.B) {
 	}
 }
 
-func BenchmarkStdHasPrefix(b *testing.B) {
+func BenchmarkStringStdHasPrefix(b *testing.B) {
 	str := ",.ABC.,"
 
 	for i := 0; i < b.N; i++ {

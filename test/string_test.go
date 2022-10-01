@@ -24,7 +24,7 @@ func TestToString(t *testing.T) {
 	}
 }
 
-func TestSlice(t *testing.T) {
+func TestStringSlice(t *testing.T) {
 	want := "bc"
 	gString := goo.FromString("abc")
 	get := gString[1:]
