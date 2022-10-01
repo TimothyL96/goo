@@ -1,7 +1,8 @@
 package goo
 
 import (
-	"fmt"
+	"log"
+	"reflect"
 )
 
 type Slice[T any] []T
@@ -40,11 +41,12 @@ func (s Slice[T]) Unique() Slice[T] {
 		return s
 	}
 
-	// Check without using reflection package (fmt still uses reflection underneath)
+	// Check with reflection package, but it is just converting pointer type
 	var checkType T
-	elementType := FromString(fmt.Sprintf("%T", checkType))
 
-	if elementType.HasAnyPrefix("map", "[]", "func") {
+	switch reflect.ValueOf(checkType).Kind() {
+	case reflect.Slice, reflect.Map, reflect.Func:
+		log.Println("Deep compare not supported. Returning the slice")
 		return s
 	}
 
