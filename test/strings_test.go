@@ -73,9 +73,19 @@ func TestStringHasPrefix(t *testing.T) {
 	}
 }
 
-func TestStringHasAnyPrefix(t *testing.T) {
+func TestStringHasAnyPrefixTrue(t *testing.T) {
 	want := true
 	gString := goo.FromString("[]abc")
+	get := gString.HasAnyPrefix("zxc", "123", "[]", "qqq")
+
+	if get.ToBool() != want {
+		t.Errorf("HasAnyPrefix() = %t; want %t", get, want)
+	}
+}
+
+func TestStringHasAnyPrefixFalse(t *testing.T) {
+	want := false
+	gString := goo.FromString("a[]abc")
 	get := gString.HasAnyPrefix("zxc", "123", "[]", "qqq")
 
 	if get.ToBool() != want {
