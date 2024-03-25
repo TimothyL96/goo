@@ -3,6 +3,6 @@ module github.com/timothyl96/goo
 go 1.19
 
 require (
-	golang.org/x/exp v0.0.0-20220930202632-ec3f01382ef9
+	golang.org/x/exp v0.0.0-20240325151524-a685a6edb6d8
 	golang.org/x/text v0.14.0
 )
