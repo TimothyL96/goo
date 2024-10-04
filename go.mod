@@ -4,5 +4,5 @@ go 1.19
 
 require (
 	golang.org/x/exp v0.0.0-20220930202632-ec3f01382ef9
-	golang.org/x/text v0.14.0
+	golang.org/x/text v0.19.0
 )
